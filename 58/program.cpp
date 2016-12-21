@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <cmath>  
 
 using namespace std;
 //106
@@ -58,12 +59,12 @@ string numberToOtherSystem(int num, int systemType){
 	return s;
 }
 
-vector<StationData> LoadData(const char* fileName){
+vector<StationData> LoadData(const char* fileName, int dataType){
 	ifstream dane(fileName);
 	vector<StationData> sd;
 	string a, b;
 	while(dane >> a >> b){
-		sd.push_back(StationData(textToInt(a, 2), textToInt(b, 2)));
+		sd.push_back(StationData(textToInt(a, dataType), textToInt(b, dataType)));
 	}
 	
 	return sd;
@@ -72,14 +73,14 @@ vector<StationData> LoadData(const char* fileName){
 ReturnedData checkStation(vector<StationData> station){
 	int min = station[0].temperature;
     int startTime = 0;
-    int previousRecord = station[0].temperature;
+    int previousRecord = station[0].temperature-1; //-1 ¿eby algorytm zaliczy³ te¿ pierwszy wynik jako rekordowy
     vector<int> incorrectMeasurements;
     vector<int> recordDays;
     for(int a=0; a<station.size(); a++){
     	if(a==0){
     		startTime = station[a].time;
 		} else {
-			if((station[a].time-startTime)%24!=0){
+			if((station[a].time-12)%24!=0){
 				incorrectMeasurements.push_back(a);
 			}
 		}
@@ -88,9 +89,10 @@ ReturnedData checkStation(vector<StationData> station){
 		}
 		if(previousRecord < station[a].temperature){
 			recordDays.push_back(a);
+			previousRecord = station[a].temperature;
 		}
 	}
-	cout << "Stacja min temp.: " << min << endl;
+	cout << "Stacja min temp.: " << numberToOtherSystem(min, 2) << "(dziesietny:" << min << ")"<< endl;
 	/*for(int x=0; x<incorrectMeasurements.size(); x++){
 		cout << incorrectMeasurements[x] << endl;
 	}*/
@@ -98,56 +100,35 @@ ReturnedData checkStation(vector<StationData> station){
 	return ReturnedData(incorrectMeasurements, recordDays);
 }
 
-/*vector<int> SumAndRemoveDuplicates(vector<int> v1, vector<int> v2){
-	vector<int> sum;
-	int bigger = 0;
-	if(v1[v1.size()] > v2[v2.size()]){
-		bigger= v1[v1.size()-1];
-	}
-	else {
-		bigger= v2[v2.size()-1];
-	}
-	int v1Index = 0;
-	int v2Index = 0;
-	int a = 0;
-	while(a<bigger){
-		while(a<v1[v1Index] && a<v2[v2Index]){
-			a++;
-		}
-		sum.push_back(a);
-		while(a>=v1[v1Index]) {
-			if(v1Index+1 > v1.size()-1){
-				while(v2Index<v2.size()-1){
-					sum.push_back(v2[v2Index]);
-					v2Index++;
-				}
-				break;
-			}
-			v1Index++;
-		}
-		while(a>=v2[v2Index]) {
-			if(v2Index+1 > v2.size()-1){
-				break;
-			}
-			v2Index++;
-		}
-	}
-	return sum;
-} */
-
-int main(){
-	int arr[] = {11,14};
-	std::vector<int> TestVector(arr, arr+2);
-	int arr2[] = {11,14, 22, 33, 55};
-	std::vector<int> TestVector2(arr2, arr2+4);
-	vector<int> sum111 = SumAndRemoveDuplicates(TestVector, TestVector2);
-	for(int x=0; x<sum111.size(); x++){
-		cout << sum111[x] << endl;
+vector<int> SumAndRemoveDuplicates(vector<int> v1, vector<int> v2){
+	for(int x=0; x<v2.size(); x++){
+		v1.push_back(v2[x]);
 	}
 	
-    vector<StationData> station1 = LoadData("dane_systemy1.txt");
-    vector<StationData> station2 = LoadData("dane_systemy2.txt");
-    vector<StationData> station3 = LoadData("dane_systemy3.txt");
+	for(int a=0; a<v1.size(); a++){
+		for(int b=1; b<v1.size()-a; b++){
+			if(v1[b-1] > v1[b]){
+				int container = v1[b-1];
+				v1[b-1] = v1[b];
+				v1[b] = container;
+			}
+		}
+	}
+	
+	for(int c=1; c<v1.size(); c++){
+		if(v1[c-1] == v1[c]){
+			v1.erase(v1.begin()+c);
+			c--;
+		}
+	}
+	
+	return v1;
+}
+
+int main(){
+    vector<StationData> station1 = LoadData("dane_systemy1.txt", 2);
+    vector<StationData> station2 = LoadData("dane_systemy2.txt", 4);
+    vector<StationData> station3 = LoadData("dane_systemy3.txt", 10);
     
     ReturnedData rd1 = checkStation(station1);
     ReturnedData rd2 = checkStation(station2);
@@ -174,15 +155,26 @@ int main(){
 			}
 		}	
 	}
+	cout << "Liczba niepoprawnych: " << comparedAll.size() <<endl;
 	
-	/*for(int q=0; q<100; q++){
-		cout<<incMeas1[q]<<" ";
-		cout<<incMeas2[q]<<" ";
-		cout<<incMeas3[q]<<" ";
-		cout<<comparedAll[q]<<endl;
-	}*/
-	cout << "Liczba niepoprawnych: " << comparedAll.size();
+	vector<int> firstTwoRecDays = SumAndRemoveDuplicates(rd1.recordDays, rd2.recordDays);
+	vector<int> allRecordDays = SumAndRemoveDuplicates(firstTwoRecDays, rd3.recordDays);
+	
+	cout << "Liczba dni rekordowych: " << allRecordDays.size() <<endl;
+	
+	int maxTempJump = 0;
+	for(int s=0; s<station1.size()-1; s++){
+		for(int d=s+1; d<station1.size()-1; d++){
+			int ti = station1[s].temperature;
+			int tj = station1[d].temperature;
+			int tempJump = (ti-tj)*(ti-tj) / abs(s-d);
+			if(tempJump > maxTempJump){
+				maxTempJump = tempJump;
+			}
+		}
+	}
+	
+	cout << "Masymalny skok temperatury: " << maxTempJump <<endl;
     
     ofstream wyniki("wyniki.txt");
-    //wyniki<<
 }
