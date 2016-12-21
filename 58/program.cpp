@@ -1,4 +1,4 @@
-//znaleŸæ jakiœ porz¹dny algorytm na scalanie dwóch tablic
+//wyniki niepoprawne dla podpunktu 58.1 (s3) oraz 58.2 (mimo poprawnego algorytmu) 
 
 #include <iostream>
 #include <fstream>
@@ -77,12 +77,8 @@ ReturnedData checkStation(vector<StationData> station){
     vector<int> incorrectMeasurements;
     vector<int> recordDays;
     for(int a=0; a<station.size(); a++){
-    	if(a==0){
-    		startTime = station[a].time;
-		} else {
-			if((station[a].time-12)%24!=0){
-				incorrectMeasurements.push_back(a);
-			}
+		if((station[a].time-12)%24!=0){
+			incorrectMeasurements.push_back(a);
 		}
     	if(min>station[a].temperature){
     		min=station[a].temperature;
@@ -93,9 +89,6 @@ ReturnedData checkStation(vector<StationData> station){
 		}
 	}
 	cout << "Stacja min temp.: " << numberToOtherSystem(min, 2) << "(dziesietny:" << min << ")"<< endl;
-	/*for(int x=0; x<incorrectMeasurements.size(); x++){
-		cout << incorrectMeasurements[x] << endl;
-	}*/
 	
 	return ReturnedData(incorrectMeasurements, recordDays);
 }
@@ -134,28 +127,15 @@ int main(){
     ReturnedData rd2 = checkStation(station2);
     ReturnedData rd3 = checkStation(station3);
     
-    vector<int> incMeas1 = rd1.incorrectMeasurements;
-    vector<int> incMeas2 = rd2.incorrectMeasurements;
-    vector<int> incMeas3 = rd3.incorrectMeasurements;
-    
-    vector<int> compared12;
-    for(int a=0; a<incMeas1.size(); a++){
-	    for(int b=0; b<incMeas2.size(); b++){
-	    	if(incMeas1[a] == incMeas2[b]){
-	    		compared12.push_back(incMeas1[a]);
-			}
-		}	
+    int count = 0;
+    int state = 12;
+    for(int a=0; a<station1.size(); a++){
+    	if(station1[a].time != state && station2[a].time != state && station3[a].time != state){
+    		count++;
+		}
+		state+=24;
 	}
-	
-	vector<int> comparedAll;
-    for(int a=0; a<compared12.size(); a++){
-	    for(int b=0; b<incMeas3.size(); b++){
-	    	if(compared12[a] == incMeas3[b]){
-	    		comparedAll.push_back(compared12[a]);
-			}
-		}	
-	}
-	cout << "Liczba niepoprawnych: " << comparedAll.size() <<endl;
+	cout << "Liczba niepoprawnych: " << count <<endl;
 	
 	vector<int> firstTwoRecDays = SumAndRemoveDuplicates(rd1.recordDays, rd2.recordDays);
 	vector<int> allRecordDays = SumAndRemoveDuplicates(firstTwoRecDays, rd3.recordDays);
