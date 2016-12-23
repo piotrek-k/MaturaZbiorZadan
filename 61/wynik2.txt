@@ -1,0 +1,8 @@
+Najwieksza liczba bedaca szescianem: 1
+Najwieksza liczba bedaca szescianem: 27
+Najwieksza liczba bedaca szescianem: 551368
+Najwieksza liczba bedaca szescianem: 1000000
+Najwieksza liczba bedaca szescianem: 250047
+Najwieksza liczba bedaca szescianem: 1000
+Najwieksza liczba bedaca szescianem: 35937
+Najwieksza liczba bedaca szescianem: 531441
