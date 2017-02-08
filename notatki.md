@@ -4,6 +4,16 @@
 printf("%.2f", x);
 ```
 
+## Konwersja char/int
+```
+char a = '4';
+int ia = a - '0';
+```
+Analogicznie int to char:
+```
+char c = i +'0';
+```
+
 ## Zaokrąglanie liczb
 ```
 #include <cmath>
