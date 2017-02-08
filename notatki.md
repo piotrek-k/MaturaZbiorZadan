@@ -4,6 +4,59 @@
 printf("%.2f", x);
 ```
 
+## Zaokrąglanie liczb
+```
+#include <cmath>
+round(3.49); //3 - zaokrąglanie naturalne
+floor(3.50); //3 - w dół
+ceil(3.49); //4 - w górę
+```
+
+## Pobieranie danych z pliku
+```
+#include <fstream>
+[...]
+ifstream dane("liczby.txt");
+int liczba;
+while(dane >> liczba)
+{
+    [...]
+}
+```
+
+## Zapisywanie danych do pliku
+```
+ofstream out("wyniki.txt",fstream::app);
+out << "Tekst" << endl;
+```
+
+## Konwersja do liczby dziesiętnej z postaci innego typu //td
+```
+int toDecimal(string num, int from){
+	int output = 0;
+	for(int x=0; x < num.length(); x++){
+		output = output * from + (num[x]-'0');
+	}
+	return output;
+}
+```
+
+## Konwersja z dziesiętnej do innego typu //td
+```
+string decToOtherSystem(int num, int to){
+	string output;
+	char z;
+	if(!num) return "0";
+	while(num>0){
+		z = '0' + num%to;
+		output = z + output;
+		num = num/to;
+	}
+	
+	return output;
+}
+```
+
 # Excel
 ## Znajdowanie pierwszej wartości spełniającej warunek:
 ```
@@ -13,4 +66,10 @@ printf("%.2f", x);
 ## Zwracanie wartości komórki o jakimś indeksie:
 ```
 =INDEKS(B:B, 3) //B:B - zakres, 3 - indeks
+```
+
+## Wiele warunków w jednym "if'ie":
+```
+ORAZ()
+LUB()
 ```
