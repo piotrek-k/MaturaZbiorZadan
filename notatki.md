@@ -14,6 +14,22 @@ Analogicznie int to char:
 char c = i +'0';
 ```
 
+## Największy wspólny dzielnik
+```
+int nwd(int x, int y)
+{
+    if (x < y)
+        return nwd(y,x);
+    if (y == 0)
+        return x;
+    return nwd(y,x%y);
+}
+```
+Najmniejsza wspólna wielokrotność:
+```
+NWW(a,b) = (a*b)/nwd(a, b)
+```
+
 ## Zaokrąglanie liczb
 ```
 #include <cmath>
