@@ -14,6 +14,11 @@ Analogicznie int to char:
 char c = i +'0';
 ```
 
+## Tworzenie tablicy
+```
+int wyniki[5] = {}; //nawiasy klamrowe nadają wartości domyślne. Ich brak powoduje pojawienie się nieprawidłowych wartości na start
+```
+
 ## Największy wspólny dzielnik
 ```
 int nwd(int x, int y)
