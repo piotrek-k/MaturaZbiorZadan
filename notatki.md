@@ -19,6 +19,22 @@ char c = i +'0';
 int wyniki[5] = {}; //nawiasy klamrowe nadają wartości domyślne. Ich brak powoduje pojawienie się nieprawidłowych wartości na start
 ```
 
+## Wskaźniki //td
+`*` służy do uzyskiwania wartości z adresu
+
+`&` służy do uzyskiwania adresu zmiennej
+```
+int x = 9; //decleration 
+int *p = &x; //decleration 
+
+cout << x; // 9 
+cout << *p; // 9 
+
+cout << &x; // address of x 
+cout << p; // address of x 
+cout << &p; // address of p
+```
+
 ## Największy wspólny dzielnik
 ```
 int nwd(int x, int y)
