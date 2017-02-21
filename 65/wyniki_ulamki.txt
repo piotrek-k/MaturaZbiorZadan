@@ -1,0 +1,4 @@
+65.1. MinUlamek: 1 225
+65.2. LiczNieskracalne 410
+65.3. Suma licznikow: 128446
+65.4. Licznik nowego ulamka: 578219135
