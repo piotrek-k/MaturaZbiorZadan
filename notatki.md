@@ -104,6 +104,24 @@ string decToOtherSystem(int num, int to){
 }
 ```
 
+## Obliczanie sumy cyfr liczby x
+```
+int sumaCyfr(int x){
+	int suma = 0;
+	while(x > 0){
+		suma += x%10;
+		x /= 10;
+	}
+	return suma;
+}
+```
+
+## Konwersja tablicy do wektora
+```
+int tab[a] = {}; //a - liczba elementow
+vector<int> newVec(tab, tab + a);
+```
+
 # Excel
 ## Znajdowanie pierwszej wartości spełniającej warunek:
 ```
