@@ -19,6 +19,23 @@ char c = i +'0';
 int wyniki[5] = {}; //nawiasy klamrowe nadają wartości domyślne. Ich brak powoduje pojawienie się nieprawidłowych wartości na start
 ```
 
+## Sortowanie bąbelkowe
+Na przykładzie funkcji sortującej ciąg znaków
+```
+string sortString(string s){
+	for(int a=0; a<s.length()-1; a++){
+		for(int b=0; b<s.length()-1-a; b++){ //pętla jest krótsza o "a", ponieważ wiadomo, że po każdym wywołaniu pierwszej pętli na koncu ciagu bedzie wartoc najwieksza
+			if((int)s[b] > s[b+1]){
+				char temp = s[b];
+				s[b] = s[b+1];
+				s[b+1] = temp;
+			}
+		}
+	}
+	return s;
+}
+```
+
 ## Wskaźniki //td
 `*` służy do uzyskiwania wartości z adresu
 
@@ -121,6 +138,13 @@ int sumaCyfr(int x){
 int tab[a] = {}; //a - liczba elementow
 vector<int> newVec(tab, tab + a);
 ```
+
+## Zamiana miejscami obiektow w vectorze
+```
+vector<string> vec;
+iter_swap(vec.begin() + b, vec.begin() + b+1); //zamiana miejscami
+```
+
 
 # Excel
 ## Znajdowanie pierwszej wartości spełniającej warunek:
