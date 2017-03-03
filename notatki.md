@@ -36,6 +36,12 @@ string sortString(string s){
 }
 ```
 
+## Kod ASCII znaku
+```
+cout << (int)'A' << endl; //65
+cout << 'C'-'A' << endl; //zwroci index litery 'C' w alfabecie (2)
+```
+
 ## Wskaźniki //td
 `*` służy do uzyskiwania wartości z adresu
 
