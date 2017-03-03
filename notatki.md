@@ -19,6 +19,12 @@ char c = i +'0';
 int wyniki[5] = {}; //nawiasy klamrowe nadają wartości domyślne. Ich brak powoduje pojawienie się nieprawidłowych wartości na start
 ```
 
+## Kod ASCII znaku
+```
+cout << (int)'A' << endl; //65
+cout << 'C'-'A' << endl; //zwroci index litery 'C' w alfabecie (2)
+```
+
 ## Wskaźniki //td
 `*` służy do uzyskiwania wartości z adresu
 
