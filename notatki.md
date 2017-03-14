@@ -196,4 +196,7 @@ Znajdzie liczbę `500` w kolumnie `B`, zwróci liczbę z kolumny `D` (ponieważ 
 ```
 =FRAGMENT.TEKSTU("Test",1,1) //zwróci 'T'
 ```
-
+## Konwersja tekstu na liczbę
+```
+=WARTOŚĆ(A2)
+```
