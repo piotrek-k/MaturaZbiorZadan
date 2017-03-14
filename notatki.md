@@ -176,3 +176,6 @@ LUB()
 =WYSZUKAJ.PIONOWO(500,B:F, 3, FAŁSZ)
 ```
 Znajdzie liczbę `500` w kolumnie `B`, zwróci liczbę z kolumny `D` (ponieważ jest trzecia z kolei). `FAŁSZ` oznacza że dopasowanie ma być dokładne.
+
+## Znajdowanie wartości która da w innej komórce konkretną wartość
+`Dane` -> `Analiza warunkowa`
