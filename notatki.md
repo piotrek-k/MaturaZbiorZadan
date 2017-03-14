@@ -156,6 +156,7 @@ iter_swap(vec.begin() + b, vec.begin() + b+1); //zamiana miejscami
 ## Znajdowanie pierwszej wartości spełniającej warunek:
 ```
 =PODAJ.POZYCJĘ(PRAWDA,E:E,0) //MATCH
+=PODAJ.POZYCJĘ(PRAWDA,D3:D110<3,0)
 ```
 `Ctrl`+`Shift`+`Enter` (curly braces) jeśli pojawia się `#N/D!`
 
