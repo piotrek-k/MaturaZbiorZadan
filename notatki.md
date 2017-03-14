@@ -179,3 +179,21 @@ Znajdzie liczbę `500` w kolumnie `B`, zwróci liczbę z kolumny `D` (ponieważ 
 
 ## Znajdowanie wartości która da w innej komórce konkretną wartość
 `Dane` -> `Analiza warunkowa`
+
+## Zliczanie wystąpień wartości w kolumnie
+```
+=LICZ.JEŻELI(A:A, "Test")
+```
+## Łączenie dwóch ciągów znaków
+```
+=ZŁĄCZ.TEKSTY(B2, C2)
+```
+## Pobieranie długości ciągu znaków
+```
+=DŁ("Test")
+```
+## Pobieranie fragmentu tekstu
+```
+=FRAGMENT.TEKSTU("Test",1,1) //zwróci 'T'
+```
+
