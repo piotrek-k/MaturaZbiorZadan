@@ -157,6 +157,7 @@ iter_swap(vec.begin() + b, vec.begin() + b+1); //zamiana miejscami
 ```
 =PODAJ.POZYCJĘ(PRAWDA,E:E,0) //MATCH
 ```
+`Ctrl`+`Shift`+`Enter` (curly braces) jeśli pojawia się `#N/D!`
 
 ## Zwracanie wartości komórki o jakimś indeksie:
 ```
