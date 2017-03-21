@@ -200,3 +200,11 @@ Znajdzie liczbę `500` w kolumnie `B`, zwróci liczbę z kolumny `D` (ponieważ 
 ```
 =WARTOŚĆ(A2)
 ```
+
+# Access
+## Różnica między datami
+[DateDiff](https://msdn.microsoft.com/en-us/library/office/gg251417(v=office.15).aspx)
+```
+DateDiff("n", [data_poczatkowa], [data_koncowa])
+```
+Gdzie pierwsza wartość oznacza typ interwału. `n` oznacza ilość minut, `d` oznacza ilość dni, `yyyy` - lat, itp.
