@@ -1,0 +1,24 @@
+108.1
+45171
+108.2
+nazwa	dlugosc
+DW990	13
+108.3
+id_drogi	nazwa	SredniaOdl
+22	Berlinka	8.17
+108.4
+nazwa	kategoria
+Autostrada Torunska	droga ekspresowa
+Gliwicka Autostrada	droga krajowa
+108.5 ???
+nazwa_sieci	autostrada	droga ekspresowa	droga krajowa	droga wojewodzka
+Blisko od szosy	23	50	136	233
+Czysta Nafta	25	44	105	235
+Dobre Paliwo	22	56	112	223
+Dyskont paliwowy	21	46	117	230
+Green Fuel	19	40	120	261
+Najpierw Ropa	23	45	128	217
+Nitrogaz	31	52	120	205
+Petrochemia Centralna	21	42	120	213
+Standard Oil	21	50	127	241
+Szybka Stacja	16	43	106	209
