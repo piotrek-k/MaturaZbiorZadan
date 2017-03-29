@@ -1,0 +1,46 @@
+109.1
+Nazwa_sprzetu	PoliczOfID_sprzetu
+Rusztowanie aluminiowe wys. 5m	28
+
+109.2
+Nr_dowodu_osoby	SumaOfKaucja
+JCK343973	1750
+
+109.3
+Imie	Nazwisko	PoliczOfID_sprzetu	Nr_dowodu_osoby
+Izabela	Kusz	4	IXX818003
+Marcin	Budzisz	4	DBC885258
+Wojciech	Dudek	4	IFM994328
+
+109.4
+Liczba osób które nie wypo¿yczy³y ¿adnego urz¹dzenia: 68
+
+109.5
+a)
+NrMiesiaca	SumaOfPrzychod
+1	43307
+2	35441
+3	46181
+4	54162
+5	81019
+6	95315
+7	111173
+8	96436
+9	101491
+10	66041
+11	47754
+12	36435
+b)
+NrMiesiaca	SumaOfOplataZaTransport
+1	850
+2	900
+3	1200
+4	1300
+5	1950
+6	1600
+7	2450
+8	2600
+9	1800
+10	850
+11	700
+12	900
