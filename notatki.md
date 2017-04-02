@@ -4,6 +4,12 @@
 printf("%.2f", x);
 ```
 
+## Liczba PI
+```
+#include<math.h>
+cout << M_PI;
+```
+
 ## Konwersja char/int
 ```
 char a = '4';
