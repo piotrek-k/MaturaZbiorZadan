@@ -1,0 +1,28 @@
+Zadanie 1
+imie	nazwisko
+KRZYSZTOF	LEWANDOWSKI
+
+tytul
+FLASH I PHP
+JEZYKI PROGRAMOWANIA II
+METODY NUMERYCZNE II
+TEORIA GRAFOW
+
+Zadanie 2
+4.7101
+
+Zadanie 3
+Plec	PoliczOfpesel
+kobieta	138
+meczyzna	192
+
+Zadanie 4
+imie	nazwisko
+JACEK	DYLAG
+PIOTR	NAJDA
+STEFAN	PIETRASZEWSKI
+MACIEJ	SIECZKOWSKI
+JULIA	ZALESKA
+
+Zadanie 5
+86

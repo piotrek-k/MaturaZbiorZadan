@@ -1,0 +1,12 @@
+Zadanie 1: 
+Nalezace do brzegu kola: 
+256 8
+200 400
+Nalezace do wznetrza kola: 7852
+Zadanie 2: 
+3.228
+3.1656
+3.1416
+Zadanie 3: 
+1000: 0.0864073
+1700: 0.0184073
