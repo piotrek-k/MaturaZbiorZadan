@@ -214,3 +214,9 @@ Znajdzie liczbę `500` w kolumnie `B`, zwróci liczbę z kolumny `D` (ponieważ 
 DateDiff("n", [data_poczatkowa], [data_koncowa])
 ```
 Gdzie pierwsza wartość oznacza typ interwału. `n` oznacza ilość minut, `d` oznacza ilość dni, `yyyy` - lat, itp.
+
+## Modulo
+```
+=5 mod 2
+```
+zwróci 1
