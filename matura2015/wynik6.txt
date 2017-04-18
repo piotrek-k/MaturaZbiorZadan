@@ -7,10 +7,10 @@ GrandPrix	PoliczOfId_wyscigu
 Indie	2
 
 3:
-Rok	MaksimumOfSumaOfPunkty	PierwszyOfImie	PierwszyOfNazwisko
-2000	108	Alexander	Wurz
-2006	134	Christian	Klien
-2012	281	Bruno	Senna
+Imie	Nazwisko	Rok	SumaOfPunkty
+Fernando	Alonso	2006	134
+Michael	Schumacher	2000	108
+Sebastian	Vettel	2012	281
 
 4:
 Kraj	PoliczOfId_kierowcy
