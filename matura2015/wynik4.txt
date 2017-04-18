@@ -5,4 +5,4 @@ Podzielnych przez 2: 500
 Podzielnych przez 8: 123
 4.3: 
 Pozycja najmniejszej: 859 (4)
-Pozycja najwiekszej: 4 (4294789801)
+Pozycja najwiekszej: 4 (4294789801) (B£¥D, POPRAWNA: 925)
