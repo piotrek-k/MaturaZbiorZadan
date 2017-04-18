@@ -1,0 +1,8 @@
+4.1: 
+422
+4.2: 
+Podzielnych przez 2: 500
+Podzielnych przez 8: 123
+4.3: 
+Pozycja najmniejszej: 859 (4)
+Pozycja najwiekszej: 4 (4294789801)

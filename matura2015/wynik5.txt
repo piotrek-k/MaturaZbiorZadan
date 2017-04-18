@@ -1,0 +1,14 @@
+Zadanie 2
+Liczba wojewodztw z wieksza liczba kobiet i mê¿czyzn:	19
+Z podzia³em na województwa:
+A	3
+B	4
+C	8
+D	4
+
+
+Zadanie 3
+Liczba mieszkañców w 2025:	402395586.8	
+Wojewodztwo z najwieksza liczb¹ ludnoœci:	w50B
+	
+Województw w których wyst¹pi efekt przeludnienia:	21	

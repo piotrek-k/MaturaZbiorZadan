@@ -1,0 +1,26 @@
+1:
+Imie	Nazwisko	MaksimumOfPunkty	GrandPrix	Rok
+Robert	Kubica	18	Australia	2010
+
+2:
+GrandPrix	PoliczOfId_wyscigu
+Indie	2
+
+3:
+Rok	MaksimumOfSumaOfPunkty	PierwszyOfImie	PierwszyOfNazwisko
+2000	108	Alexander	Wurz
+2006	134	Christian	Klien
+2012	281	Bruno	Senna
+
+4:
+Kraj	PoliczOfId_kierowcy
+Australia	2
+Brazylia	2
+Finlandia	1
+Francja	2
+Hiszpania	1
+Japonia	1
+Meksyk	1
+Niemcy	4
+Wenezuela	1
+Wielka Brytania	3
