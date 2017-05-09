@@ -1,0 +1,20 @@
+a)
+Nazwisko	Imie
+Czeszewska	Paulina
+Derengowska	Joanna
+Jasinska	Zuzanna
+Studzieniecka	Marta
+Waluszko	Zofia
+b)
+Nazwisko	Imie
+Adamczyk	Julia
+Adamik	Pawel
+Adamowicz	Weronika
+c)
+Nazwa_przedszkola	Numer_preferencji	LiczbaOsób
+Przedszkole nr 61	1	20
+d)
+Nazwa_przedszkola	Chetnych_na_miejsce	Liczba_miejsc	Chetnych
+Przedszkole nr 1	0.65	55	36
+Przedszkole nr 12	0.69	45	31
+Niepubliczne Przedszkole Krasnal	0.90	30	27
